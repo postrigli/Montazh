@@ -286,9 +286,9 @@
       { name: 'Nova Florida', models: [{ name: 'Aries Dual', connectionType: ConnectionType.RELAY }, { name: 'Delfis / Delfis Mono', connectionType: ConnectionType.RELAY }, { name: 'Drago Dual', connectionType: ConnectionType.RELAY }, { name: 'Libra Dual / Pictor Dual', connectionType: ConnectionType.RELAY }, { name: 'Nibir', connectionType: ConnectionType.RELAY }, { name: 'Vela Compact', connectionType: ConnectionType.RELAY }] },
       { name: 'Oasis', models: [{ name: 'BM', connectionType: ConnectionType.RELAY }, { name: 'RT', connectionType: ConnectionType.RELAY }] },
       { name: 'Protherm', models: [
-          { name: 'Меддовод KLOM17', connectionType: ConnectionType.EBUS },
-          { name: 'Меддовод KLOM', connectionType: ConnectionType.RELAY },
-          { name: 'Меддовод KLO / KLZ / PLO / TLO', connectionType: ConnectionType.RELAY },
+          { name: 'Медведь KLOM17', connectionType: ConnectionType.EBUS },
+          { name: 'Медведь KLOM', connectionType: ConnectionType.RELAY },
+          { name: 'Медведь KLO / KLZ / PLO / TLO', connectionType: ConnectionType.RELAY },
           { name: 'Рысь (LYNX) HK', connectionType: ConnectionType.RELAY },
           { name: 'Рысь (LYNX) Condens', connectionType: ConnectionType.EBUS },
           { name: 'Пантера v17 (до 2015)', connectionType: ConnectionType.RELAY },
@@ -428,7 +428,7 @@
     };
 
     const PRIORITY_NAMES = ['Baxi', 'Bosch', 'Buderus', 'Ferroli', 'Navien', 'Protherm', 'Vaillant', 'Viessmann', 'Zota', 'Эван'];
-    const processedBrands = RAW_BOILER_BRANDS.filter(b => b.name !== 'Titan').map(brand => ({
+    const processedBrands = RAW_BOILER_BRANDS.filter(brand => brand.name !== 'Titan').map(brand => ({
       ...brand,
       models: [...brand.models].sort(sortAlphaLatinFirst)
     }));
@@ -499,10 +499,10 @@
       { id: 'ec01062', name: 'Коннектор 4P4C (RJ11), 10шт', price: 50, category: 'other', nomenclatureCategory: 'Товары ectoControl', image: 'https://ectocontrol.ru/image/cache/catalog/photos/connector-4p4c/connector-4p4c-3-300x300.jpg' },
       { id: 'ec01031', name: 'Батарейка (запасная) для датчиков', price: 260, category: 'other', nomenclatureCategory: 'Товары ectoControl', image: 'https://ectocontrol.ru/image/cache/catalog/photos/battery-cr123a/cr123a-1n-300x300.jpg' },
       { id: 'ec01063', name: 'Сетевой адаптер MeanWell 14В 1.5А DIN', price: 2500, category: 'other', nomenclatureCategory: 'Расходники', image: 'https://ectocontrol.ru/image/cache/catalog/photos/adapter-14v-din/adapter-14v-din-5-300x300.jpg', dinModules: 2.2 },
-      { id: 'ec01113', name: 'Шаровой кран 1", 12В, Neptun Click SE Bugatti с электроприводом', price: 15600, category: 'other', nomenclatureCategory: 'Расходники', consumesPort: { type: 'RELAY', amount: 1 }, image: 'https://i.siteapi.org/sEKq2vSMbUqaKEHzcS0wnki0VfY=/fit-in/0x0/center/top/filters:fill(transparent):format(webp)/s.siteapi.org/1b05f7bbad9a56b/img/bq5m7sqexvcwoogcggsg4ogkock8w4' },
-      { id: 'ec01111', name: 'Шаровой кран 1/2", 12В, Neptun Click SE Bugatti с электроприводом', price: 12000, category: 'other', nomenclatureCategory: 'Расходники', consumesPort: { type: 'RELAY', amount: 1 }, image: 'https://i.siteapi.org/sEKq2vSMbUqaKEHzcS0wnki0VfY=/fit-in/0x0/center/top/filters:fill(transparent):format(webp)/s.siteapi.org/1b05f7bbad9a56b/img/bq5m7sqexvcwoogcggsg4ogkock8w4' },
-      { id: 'ec01112', name: 'Шаровой кран 3/4", 12В, Neptun Click SE Bugatti с электроприводом', price: 12500, category: 'other', nomenclatureCategory: 'Расходники', consumesPort: { type: 'RELAY', amount: 1 }, image: 'https://i.siteapi.org/sEKq2vSMbUqaKEHzcS0wnki0VfY=/fit-in/0x0/center/top/filters:fill(transparent):format(webp)/s.siteapi.org/1b05f7bbad9a56b/img/bq5m7sqexvcwoogcggsg4ogkock8w4' },
-      { id: 'ec01061', name: 'Промежуточное реле Shenler', price: 1880, category: 'other', nomenclatureCategory: 'Расходники', image: 'https://ectocontrol.ru/image/cache/catalog/photos/shenler/shenler_4-300x300.jpg', consumesPort: { type: 'RELAY', amount: 0 } },
+      { id: 'ec01113', name: 'Шаровой кран 1", 12В, Neptun Click SE Bugatti с электроприводом', price: 15600, category: 'other', nomenclatureCategory: 'Расходники', consumesPort: { type: 'RELAY', amount: 1 }, image: 'https://i.siteapi.org/sEKq2vSMbUqaKEHzcS0wnki0VfY=/fit-in/0x0/center/top/filters:fill(transparent):format(webp)/s.api.org/1b05f7bbad9a56b/img/bq5m7sqexvcwoogcggsg4ogkock8w4' },
+      { id: 'ec01111', name: 'Шаровой кран 1/2", 12В, Neptun Click SE Bugatti с электроприводом', price: 12000, category: 'other', nomenclatureCategory: 'Расходники', consumesPort: { type: 'RELAY', amount: 1 }, image: 'https://i.siteapi.org/sEKq2vSMbUqaKEHzcS0wnki0VfY=/fit-in/0x0/center/top/filters:fill(transparent):format(webp)/s.api.org/1b05f7bbad9a56b/img/bq5m7sqexvcwoogcggsg4ogkock8w4' },
+      { id: 'ec01112', name: 'Шаровой кран 3/4", 12В, Neptun Click SE Bugatti с электроприводом', price: 12500, category: 'other', nomenclatureCategory: 'Расходники', consumesPort: { type: 'RELAY', amount: 1 }, image: 'https://i.siteapi.org/sEKq2vSMbUqaKEHzcS0wnki0VfY=/fit-in/0x0/center/top/filters:fill(transparent):format(webp)/s.api.org/1b05f7bbad9a56b/img/bq5m7sqexvcwoogcggsg4ogkock8w4' },
+      { id: 'ec01061', name: 'Промежуточное реле Shenler', price: 1880, category: 'other', nomenclatureCategory: 'Расходники', image: 'https://ectocontrol.ru/image/cache/catalog/photos/shenler/shenler_4-300x300.jpg', consumesPort: { type: 'RELAY', amount: 0 }, dinModules: 1 },
       { id: 'PR100080', name: 'Программируемое реле ОВЕН ПР-100 4 выхода/8 входов', price: 9490, category: 'other', nomenclatureCategory: 'Расходники', image: 'http://files.ihome.moscow/PR1000804.png', dinModules: 5 },
       { id: '3941071', name: 'Евровилка угловая с ушком белая 16А', price: 140, category: 'other', nomenclatureCategory: 'Расходники', image: 'http://files.ihome.moscow/3941071.jpg' },
       { id: '859086', name: 'Розетка накладная 220В (для питания контроллера)', price: 265, category: 'other', nomenclatureCategory: 'Расходники', image: 'http://files.ihome.moscow/859086.jpg' },
@@ -514,7 +514,7 @@
       { id: 'mdb-47', name: 'Кнопка модульная КМ-47 (серая) EKF PROxima', price: 1530, category: 'other', nomenclatureCategory: 'Расходники', image: 'http://files.ihome.moscow/mdb-47-grey-pro.jpg', dinModules: 1 },
       { id: 'mdla-47', name: 'Лампа EKF Proxima сигнальная, ЛС-47 0.5А 20IP', price: 490, category: 'other', nomenclatureCategory: 'Расходники', image: 'http://files.ihome.moscow/mdla-47-w-pro.jpg', dinModules: 0.5 },
       { id: '8258314', name: 'Лампа сигнальная, 220В', price: 490, category: 'other', nomenclatureCategory: 'Расходники', image: 'http://files.ihome.moscow/8258314.jpg' },
-      { id: '47094328', name: 'Индикатор напряжения, 220В (вольтметр)', price: 890, category: 'other', nomenclatureCategory: 'Расходники', image: 'http://files.ihome.moscow/4709432844.webp', dinModules: 1 },
+      { id: '47094328', name: 'Индикатор напряжения, 220В (вольтметр)', price: 890, category: 'other', nomenclatureCategory: 'Расходники', image: 'http://files.ihome.moscow/4709432844.webp', dinModules: 0 },
       { id: '17255526', name: 'Коммутационный шкаф IP65 (300*400*170)', price: 6690, category: 'other', nomenclatureCategory: 'Расходники', image: 'http://files.ihome.moscow/17255526.webp' },
       { id: '17256234', name: 'Коммутационный шкаф IP65 (500*400*175)', price: 11890, category: 'other', nomenclatureCategory: 'Расходники', image: 'http://files.ihome.moscow/17256234.webp' },
       { id: '17256174', name: 'Коммутационный шкаф IP65 (600*400*200)', price: 14740, category: 'other', nomenclatureCategory: 'Расходники', image: 'http://files.ihome.moscow/17256174.webp' },
@@ -529,7 +529,7 @@
       { id: '3784384', name: 'Авт-кий выключатель однополюсный 10А, 4,5кА', price: 690, category: 'other', nomenclatureCategory: 'Расходники', image: 'http://files.ihome.moscow/3784384.jpg', dinModules: 1 },
       { id: '9345557', name: 'Шина N/PE', price: 176, category: 'other', nomenclatureCategory: 'Расходники', image: 'http://files.ihome.moscow/9345557.png', dinModules: 0.5 },
       { id: '1010012', name: 'Комплект клеммников на DIN-рейку Phoenix Contact', price: 1990, category: 'other', nomenclatureCategory: 'Расходники', image: 'http://files.ihome.moscow/on1010012.jpg', dinModules: 8 },
-      { id: '68108944', name: 'Комплект материалов для сборки и монтажа', price: 2490, category: 'other', nomenclatureCategory: 'Расходники', image: 'http://files.ihome.moscow/68108944.png', dinModules: 1 },
+      { id: '68108944', name: 'Комплект материалов для сборки и монтажа', price: 2490, category: 'other', nomenclatureCategory: 'Расходники', image: 'http://files.ihome.moscow/68108944.png', dinModules: 0 },
       { id: '89595130', name: 'Блок управления диодной подсветкой + RGBW-лента', price: 4990, category: 'other', nomenclatureCategory: 'Расходники', image: 'http://files.ihome.moscow/89595130.webp', dinModules: 3 },
       { id: '34897896', name: 'Датчик температуры для теплого пола (NTC 10 кОм)', price: 1390, category: 'other', nomenclatureCategory: 'Расходники', image: 'http://files.ihome.moscow/ntc.jpg' },
       { id: 'm17255526', name: 'Монтаж, сборка, настройка шкафа автоматики (300*400*170)', price: 34990, category: 'other', nomenclatureCategory: 'Работы', image: 'http://files.ihome.moscow/work.jpg' },
@@ -588,7 +588,6 @@
         addItem('26457334', state.mixingValves);
       }
       
-      // LOGIC 3.1 & 3.2: Servos additional items
       if (state.cabinetBrand === 'Plastim') {
         addItem('9355978', state.mixingValves);
       } else {
@@ -604,7 +603,6 @@
       addItem('ec01091', state.wiredThermostats); usage.DOP += state.wiredThermostats;
       addItem('ec01080', state.wirelessThermostats); usage.LORA += state.wirelessThermostats;
       
-      // LOGIC 2: Floor sensor calculation
       const floorA = Math.min(state.floorSensors, state.wiredThermostats);
       const floorB = state.floorSensors - floorA;
       addItem('34897896', floorA);
@@ -614,7 +612,6 @@
       usage.RADIO += state.coSensors; addItem('ec01068', state.coSensors);
       usage.CONTACT += state.pressureSensors * 2; addItem('ec01010', state.pressureSensors);
       
-      // LOGIC 1.1: Analog sensor & Input 123
       usage['123'] += state.analogPressureSensors;
       addItem('PRT-100-1,6', state.analogPressureSensors);
 
@@ -630,7 +627,6 @@
       usage.RADIO += state.wirelessLeakSensors; addItem('ec01007', state.wirelessLeakSensors);
       usage.LORA += state.wirelessLeakSensorsLora; addItem('ec01056', state.wirelessLeakSensorsLora);
 
-      // Neptun Logic 7
       const totalNeptun = state.neptun12 + state.neptun34 + state.neptun1;
       if (totalNeptun > 0) {
         addItem('ec01111', state.neptun12); usage.RELAY += state.neptun12;
@@ -643,7 +639,6 @@
         }
       }
 
-      // Logic 5: Pumps additional items
       if (state.heatingPumps > 0) {
         if (state.cabinetBrand === 'Plastim') {
            addItem('ec01061', state.heatingPumps); addItem('8027098', state.heatingPumps); addItem('8258314', state.heatingPumps);
@@ -652,7 +647,6 @@
         }
       }
 
-      // Logic 6: Auto Pressure
       if (state.autoPressure) {
         addItem('ec01061', 1); addItem('ec01010', 1); addItem('PR100080', 1); addItem('31425189', 1);
         if (state.cabinetBrand === 'Plastim') {
@@ -664,7 +658,6 @@
 
       state.manualItems.forEach(item => addItem(item.productId, item.quantity, true));
 
-      // Resolve Logic 1.1: Input 123
       while (usage['123'] > available['123']) {
         addItem('ec01090', 1); available['123'] += 8; usage.DOP += 1;
       }
@@ -697,11 +690,6 @@
       const baseItem = cart.get('ec01v40');
       if (baseItem) baseItem.quantity = baseQty;
 
-      if ((cart.get('ec01060')?.quantity >= 1) || (cart.get('ec01025')?.quantity >= 2)) {
-        addItem('ec01063', 1); addItem('ec01028', 1);
-      }
-
-      // Logic 4: Cabinets and components
       let totalDIN = Array.from(cart.values()).reduce((sum, item) => sum + (item.dinModules ? item.dinModules * item.quantity : 0), 0);
       let cabQty = 1;
       let cabId = '';
@@ -711,32 +699,27 @@
         if (totalDIN >= 169) { cabQty = 3; totalDIN /= 3; }
         else if (totalDIN >= 85) { cabQty = 2; totalDIN /= 2; }
         
-        if (totalDIN <= 26) cabId = '17255526';
-        else if (totalDIN <= 44) cabId = '17256234';
+        if (totalDIN <= 28) cabId = '17255526';
+        else if (totalDIN <= 45) cabId = '17256234';
         else if (totalDIN <= 60) cabId = '17256174';
         else if (totalDIN <= 84) cabId = '17258634';
         
         if (cabId) {
           addItem(cabId, cabQty);
-          // 4.1.1.1 Consumables
           addItem('9714494', cabQty); addItem('ec01063', cabQty); addItem('5520076', cabQty); 
           addItem('3784384', cabQty); addItem('47094328', cabQty); addItem('9345557', cabQty * 3); 
           addItem('1010012', cabQty); addItem('68108944', cabQty);
-          // 4.1.1.2-5 Works
           const workPrefix = onObj ? 'm' : 'r';
           addItem(workPrefix + cabId, cabQty);
         }
       } else {
         cabQty = totalDIN <= 54 ? 1 : (totalDIN <= 109 ? 2 : 3);
         addItem('31982196', cabQty);
-        // 4.2.1.1 Consumables
         addItem('9714494', cabQty); addItem('ec01063', cabQty * 2); addItem('5520076', cabQty);
         addItem('3784384', cabQty * 2); addItem('9345557', cabQty); addItem('1010012', cabQty); addItem('68108944', cabQty);
-        // 4.2.2.2 Works
         addItem((onObj ? 'm' : 'r') + '31982196', cabQty);
       }
 
-      // Final processing: VAT & Discounts
       const finalItems = Array.from(cart.values()).map(item => {
           let calcPrice = item.price;
           const isEcto = item.nomenclatureCategory === 'Товары ectoControl';
@@ -973,11 +956,27 @@
           <div className="space-y-6">
             <div>
               <label className="block text-xs font-bold text-ecto-lightgray uppercase mb-2">Скидка на оборудование (%)</label>
-              <input type="number" min="-100" max="100" className="w-full border-b border-gray-300 bg-transparent py-2 focus:outline-none focus:border-ecto-gold transition-colors text-ecto-dark font-medium" value={state.equipmentDiscount} onChange={(e) => onUpdate({ equipmentDiscount: parseFloat(e.target.value) || 0 })} />
+              <input 
+                type="number" 
+                min="-100" 
+                max="100" 
+                className="w-full border-b border-gray-300 bg-transparent py-2 focus:outline-none focus:border-ecto-gold transition-colors text-ecto-dark font-medium" 
+                value={state.equipmentDiscount} 
+                onFocus={(e) => e.target.select()}
+                onChange={(e) => onUpdate({ equipmentDiscount: parseFloat(e.target.value) || 0 })} 
+              />
             </div>
             <div>
               <label className="block text-xs font-bold text-ecto-lightgray uppercase mb-2">Скидка на работы (%)</label>
-              <input type="number" min="-100" max="100" className="w-full border-b border-gray-300 bg-transparent py-2 focus:outline-none focus:border-ecto-gold transition-colors text-ecto-dark font-medium" value={state.workDiscount} onChange={(e) => onUpdate({ workDiscount: parseFloat(e.target.value) || 0 })} />
+              <input 
+                type="number" 
+                min="-100" 
+                max="100" 
+                className="w-full border-b border-gray-300 bg-transparent py-2 focus:outline-none focus:border-ecto-gold transition-colors text-ecto-dark font-medium" 
+                value={state.workDiscount} 
+                onFocus={(e) => e.target.select()}
+                onChange={(e) => onUpdate({ workDiscount: parseFloat(e.target.value) || 0 })} 
+              />
             </div>
           </div>
         </div>
@@ -1031,7 +1030,14 @@
                 <select className="w-full border border-gray-200 rounded-lg p-3 mb-4 bg-gray-50 text-ecto-dark focus:outline-none focus:ring-2 focus:ring-ecto-gold/50" value={selectedManualId} onChange={(e) => setSelectedManualId(e.target.value)}>
                   {Object.entries(sortedProductsForAdd).map(([cat, prods]) => (<optgroup key={cat} label={cat}>{prods.map(p => (<option key={p.id} value={p.id}>{p.name} ({p.price} ₽)</option>))}</optgroup>))}
                 </select>
-                <input type="number" min="1" className="w-full border border-gray-200 rounded-lg p-3 mb-6 bg-gray-50 text-ecto-dark focus:outline-none focus:ring-2 focus:ring-ecto-gold/50" value={manualQty} onChange={(e) => setManualQty(parseInt(e.target.value))} />
+                <input 
+                  type="number" 
+                  min="1" 
+                  className="w-full border border-gray-200 rounded-lg p-3 mb-6 bg-gray-50 text-ecto-dark focus:outline-none focus:ring-2 focus:ring-ecto-gold/50" 
+                  value={manualQty} 
+                  onFocus={(e) => e.target.select()}
+                  onChange={(e) => setManualQty(parseInt(e.target.value))} 
+                />
                 <div className="flex justify-end space-x-3"><button onClick={() => setIsModalOpen(false)} className="px-5 py-2 text-gray-500 hover:text-ecto-dark font-medium transition-colors">Отмена</button><button onClick={() => { onManualAdd({ productId: selectedManualId, quantity: manualQty }); setIsModalOpen(false); }} className="px-5 py-2 bg-ecto-gold text-white font-bold rounded-lg hover:bg-[#e6aa00] transition-colors">Добавить</button></div>
               </div>
             </div>
