@@ -245,7 +245,7 @@
       { name: 'Hermann', models: [{ name: 'Eura', connectionType: ConnectionType.RELAY }, { name: 'Habitat 2', connectionType: ConnectionType.RELAY }, { name: 'Thieis', connectionType: ConnectionType.RELAY }] },
       { name: 'Hi-Therm', models: [{ name: 'Optimus', connectionType: ConnectionType.RELAY }] },
       { name: 'Hortek', models: [{ name: 'HR-2K', connectionType: ConnectionType.OPENTHERM }, { name: 'Q-Series', connectionType: ConnectionType.RELAY }] },
-      { name: 'Hubert', models: [{ name: 'ABG 10-35 DY', connectionType: ConnectionType.RELAY }, { name: 'Smart AGB', connectionType: ConnectionType.RELAY }] },
+      { name: 'Hubert', models: [{ name: 'ABG 10-35 DY', connectionType: ConnectionType.RELAY }] },
       { name: 'Immergas', models: [{ name: 'EOLO Mythos', connectionType: ConnectionType.OPENTHERM }, { name: 'EOLO Star', connectionType: ConnectionType.RELAY }, { name: 'Nike Mythos', connectionType: ConnectionType.RELAY }, { name: 'Nike Star', connectionType: ConnectionType.RELAY }, { name: 'Alpha 24', connectionType: ConnectionType.RELAY }, { name: 'MINI EOLO', connectionType: ConnectionType.RELAY }, { name: 'Victrix Zeus Superior', connectionType: ConnectionType.RELAY }, { name: 'Victrix Tera', connectionType: ConnectionType.RELAY }, { name: 'Victrix Maior', connectionType: ConnectionType.RELAY }] },
       { name: 'ItalTherm', models: [{ name: 'City Class', connectionType: ConnectionType.OPENTHERM }] },
       { name: 'Jaspi', models: [{ name: 'ECO / LUX', connectionType: ConnectionType.RELAY }] },
@@ -690,19 +690,27 @@
       const baseItem = cart.get('ec01v40');
       if (baseItem) baseItem.quantity = baseQty;
 
-      let totalDIN = Array.from(cart.values()).reduce((sum, item) => sum + (item.dinModules ? item.dinModules * item.quantity : 0), 0);
+      // --- CABINET SELECTION LOGIC (UPDATED AS PER TZ) ---
+      const equipmentDIN = Array.from(cart.values()).reduce((sum, item) => sum + (item.dinModules ? item.dinModules * item.quantity : 0), 0);
+      
+      // Stage 1: Update overhead constants
+      const overhead = state.cabinetBrand === 'Plastim' ? 16.7 : 18.9;
+      let decisionDIN = equipmentDIN + overhead;
+      
       let cabQty = 1;
       let cabId = '';
       const onObj = state.installMode === 'На объекте';
 
       if (state.cabinetBrand === 'Plastim') {
-        if (totalDIN >= 169) { cabQty = 3; totalDIN /= 3; }
-        else if (totalDIN >= 85) { cabQty = 2; totalDIN /= 2; }
+        // Handle multiple cabinets scaling
+        if (decisionDIN >= 169) { cabQty = 3; decisionDIN /= 3; }
+        else if (decisionDIN >= 85) { cabQty = 2; decisionDIN /= 2; }
         
-        if (totalDIN <= 28) cabId = '17255526';
-        else if (totalDIN <= 45) cabId = '17256234';
-        else if (totalDIN <= 60) cabId = '17256174';
-        else if (totalDIN <= 84) cabId = '17258634';
+        // Stage 2: Correct thresholds for Plastim
+        if (decisionDIN < 30) cabId = '17255526';
+        else if (decisionDIN < 45) cabId = '17256234';
+        else if (decisionDIN < 60) cabId = '17256174';
+        else cabId = '17258634';
         
         if (cabId) {
           addItem(cabId, cabQty);
@@ -713,7 +721,8 @@
           addItem(workPrefix + cabId, cabQty);
         }
       } else {
-        cabQty = totalDIN <= 54 ? 1 : (totalDIN <= 109 ? 2 : 3);
+        // Stage 3: Tekfor scalability logic
+        cabQty = Math.ceil(decisionDIN / 54);
         addItem('31982196', cabQty);
         addItem('9714494', cabQty); addItem('ec01063', cabQty * 2); addItem('5520076', cabQty);
         addItem('3784384', cabQty * 2); addItem('9345557', cabQty); addItem('1010012', cabQty); addItem('68108944', cabQty);
@@ -1095,6 +1104,8 @@
       useEffect(() => {
         const items = calculateCart(state);
         const totalDIN = items.reduce((sum, item) => sum + (item.dinModules ? item.dinModules * item.quantity : 0), 0);
+        
+        // Stage 4: Sync limits in useEffect with updated data
         const limit = state.cabinetBrand === 'Plastim' ? 255 : 165;
         
         if (totalDIN >= limit) {
