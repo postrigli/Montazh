@@ -245,7 +245,7 @@
       { name: 'Hermann', models: [{ name: 'Eura', connectionType: ConnectionType.RELAY }, { name: 'Habitat 2', connectionType: ConnectionType.RELAY }, { name: 'Thieis', connectionType: ConnectionType.RELAY }] },
       { name: 'Hi-Therm', models: [{ name: 'Optimus', connectionType: ConnectionType.RELAY }] },
       { name: 'Hortek', models: [{ name: 'HR-2K', connectionType: ConnectionType.OPENTHERM }, { name: 'Q-Series', connectionType: ConnectionType.RELAY }] },
-      { name: 'Hubert', models: [{ name: 'ABG 10-35 DY', connectionType: ConnectionType.RELAY }, { name: 'Smart AGB', connectionType: ConnectionType.RELAY }] },
+      { name: 'Hubert', models: [{ name: 'ABG 10-35 DY', connectionType: ConnectionType.RELAY }] },
       { name: 'Immergas', models: [{ name: 'EOLO Mythos', connectionType: ConnectionType.OPENTHERM }, { name: 'EOLO Star', connectionType: ConnectionType.RELAY }, { name: 'Nike Mythos', connectionType: ConnectionType.RELAY }, { name: 'Nike Star', connectionType: ConnectionType.RELAY }, { name: 'Alpha 24', connectionType: ConnectionType.RELAY }, { name: 'MINI EOLO', connectionType: ConnectionType.RELAY }, { name: 'Victrix Zeus Superior', connectionType: ConnectionType.RELAY }, { name: 'Victrix Tera', connectionType: ConnectionType.RELAY }, { name: 'Victrix Maior', connectionType: ConnectionType.RELAY }] },
       { name: 'ItalTherm', models: [{ name: 'City Class', connectionType: ConnectionType.OPENTHERM }] },
       { name: 'Jaspi', models: [{ name: 'ECO / LUX', connectionType: ConnectionType.RELAY }] },
@@ -532,16 +532,70 @@
       { id: '68108944', name: 'Комплект материалов для сборки и монтажа', price: 2490, category: 'other', nomenclatureCategory: 'Расходники', image: 'https://raw.githubusercontent.com/postrigli/Montazh2/main/images_resized/68108944.jpg', dinModules: 0 },
       { id: '89595130', name: 'Блок управления диодной подсветкой + RGBW-лента', price: 4990, category: 'other', nomenclatureCategory: 'Расходники', image: 'https://raw.githubusercontent.com/postrigli/Montazh2/main/images_resized/89595130.jpg', dinModules: 3 },
       { id: '34897896', name: 'Датчик температуры для теплого пола (NTC 10 кОм)', price: 1390, category: 'other', nomenclatureCategory: 'Расходники', image: 'https://raw.githubusercontent.com/postrigli/Montazh2/main/images_resized/rabota.png' },
-      { id: 'm17255526', name: 'Монтаж, сборка, настройка шкафа автоматики (300*400*170)', price: 34990, category: 'other', nomenclatureCategory: 'Работы', image: 'https://raw.githubusercontent.com/postrigli/Montazh2/main/images_resized/rabota.png' },
-      { id: 'm17256234', name: 'Монтаж, сборка, настройка шкафа автоматики (500*400*175)', price: 44990, category: 'other', nomenclatureCategory: 'Работы', image: 'https://raw.githubusercontent.com/postrigli/Montazh2/main/images_resized/rabota.png' },
-      { id: 'm17256174', name: 'Монтаж, сборка, настройка шкафа автоматики (600*400*200)', price: 54990, category: 'other', nomenclatureCategory: 'Работы', image: 'https://raw.githubusercontent.com/postrigli/Montazh2/main/images_resized/rabota.png' },
-      { id: 'm17258634', name: 'Монтаж, сборка, настройка шкафа автоматики (500*700*250)', price: 64990, category: 'other', nomenclatureCategory: 'Работы', image: 'https://raw.githubusercontent.com/postrigli/Montazh2/main/images_resized/rabota.png' },
-      { id: 'm31982196', name: 'Монтаж, сборка, настройка щита автоматики Tekfor.', price: 54990, category: 'other', nomenclatureCategory: 'Работы', image: 'https://raw.githubusercontent.com/postrigli/Montazh2/main/images_resized/rabota.png' },
-      { id: 'r17255526', name: 'Монтаж, сборка, настройка шкафа автоматики (300*400*170) - в офисе', price: 14990, category: 'other', nomenclatureCategory: 'Работы', image: 'https://raw.githubusercontent.com/postrigli/Montazh2/main/images_resized/rabota.png' },
-      { id: 'r17256234', name: 'Монтаж, сборка, настройка шкафа автоматики (500*400*175) - в офисе', price: 16990, category: 'other', nomenclatureCategory: 'Работы', image: 'https://raw.githubusercontent.com/postrigli/Montazh2/main/images_resized/rabota.png' },
-      { id: 'r17256174', name: 'Монтаж, сборка, настройка шкафа автоматики (600*400*200) - в офисе', price: 18990, category: 'other', nomenclatureCategory: 'Работы', image: 'https://raw.githubusercontent.com/postrigli/Montazh2/main/images_resized/rabota.png' },
-      { id: 'r17258634', name: 'Монтаж, сборка, настройка шкафа автоматики (500*700*250) - в офисе', price: 21990, category: 'other', nomenclatureCategory: 'Работы', image: 'https://raw.githubusercontent.com/postrigli/Montazh2/main/images_resized/rabota.png' },
-      { id: 'r31982196', name: 'Монтаж, сборка, настройка щита автоматики Tekfor - в офисе', price: 18990, category: 'other', nomenclatureCategory: 'Работы', image: 'https://raw.githubusercontent.com/postrigli/Montazh2/main/images_resized/rabota.png' },
+      { id: 'm17255526', name: 'Монтаж, сборка, настройка шкафа автоматики (300*400*170)', price: 47970, category: 'other', nomenclatureCategory: 'Работы', image: 'https://raw.githubusercontent.com/postrigli/Montazh2/main/images_resized/rabota.png' },
+      { id: 'm17256234', name: 'Монтаж, сборка, настройка шкафа автоматики (500*400*175)', price: 63460, category: 'other', nomenclatureCategory: 'Работы', image: 'https://raw.githubusercontent.com/postrigli/Montazh2/main/images_resized/rabota.png' },
+      { id: 'm17256174', name: 'Монтаж, сборка, настройка шкафа автоматики (600*400*200)', price: 73950, category: 'other', nomenclatureCategory: 'Работы', image: 'https://raw.githubusercontent.com/postrigli/Montazh2/main/images_resized/rabota.png' },
+      { id: 'm17258634', name: 'Монтаж, сборка, настройка шкафа автоматики (500*700*250)', price: 88440, category: 'other', nomenclatureCategory: 'Работы', image: 'https://raw.githubusercontent.com/postrigli/Montazh2/main/images_resized/rabota.png' },
+      { id: 'm31982196', name: 'Монтаж, сборка, настройка щита автоматики Tekfor.', price: 81950, category: 'other', nomenclatureCategory: 'Работы', image: 'https://raw.githubusercontent.com/postrigli/Montazh2/main/images_resized/rabota.png' },
+      { id: 'r17255526', name: 'Сборка, настройка шкафа автоматики (300*400*170)', price: 34980, category: 'other', nomenclatureCategory: 'Работы', image: 'https://raw.githubusercontent.com/postrigli/Montazh2/main/images_resized/rabota.png' },
+      { id: 'r17256234', name: 'Сборка, настройка шкафа автоматики (500*400*175)', price: 48470, category: 'other', nomenclatureCategory: 'Работы', image: 'https://raw.githubusercontent.com/postrigli/Montazh2/main/images_resized/rabota.png' },
+      { id: 'r17256174', name: 'Сборка, настройка шкафа автоматики (600*400*200)', price: 56960, category: 'other', nomenclatureCategory: 'Работы', image: 'https://raw.githubusercontent.com/postrigli/Montazh2/main/images_resized/rabota.png' },
+      { id: 'r17258634', name: 'Сборка, настройка шкафа автоматики (500*700*250)', price: 70450, category: 'other', nomenclatureCategory: 'Работы', image: 'https://raw.githubusercontent.com/postrigli/Montazh2/main/images_resized/rabota.png' },
+      { id: 'r31982196', name: 'Сборка, настройка щита автоматики Tekfor.', price: 61960, category: 'other', nomenclatureCategory: 'Работы', image: 'https://raw.githubusercontent.com/postrigli/Montazh2/main/images_resized/rabota.png' },
+      // --- НОВЫЕ СОПУТСТВУЮЩИЕ РАБОТЫ ---
+      { id: 'r26457334', name: 'Прокладка кабеля, монтаж, подключение сервопривода', price: 2490, category: 'other', nomenclatureCategory: 'Работы', linkedHardwareId: '26457334', image: 'https://raw.githubusercontent.com/postrigli/Montazh2/main/images_resized/rabota.png' },
+      { id: 'rec01099', name: 'Прокладка кабеля, монтаж, подключение сервопривода', price: 1690, category: 'other', nomenclatureCategory: 'Работы', linkedHardwareId: 'ec01099', image: 'https://raw.githubusercontent.com/postrigli/Montazh2/main/images_resized/rabota.png' },
+      { id: 'rec01027', name: 'Монтаж, подключение, проверка связи антенны', price: 390, category: 'other', nomenclatureCategory: 'Работы', linkedHardwareId: 'ec01027', image: 'https://raw.githubusercontent.com/postrigli/Montazh2/main/images_resized/rabota.png' },
+      { id: 'rec01033', name: 'Монтаж, подключение разветвителя', price: 690, category: 'other', nomenclatureCategory: 'Работы', linkedHardwareId: 'ec01033', image: 'https://raw.githubusercontent.com/postrigli/Montazh2/main/images_resized/rabota.png' },
+      { id: 'rec01030', name: 'Прокладка кабеля, монтаж, подключение датчика влажности', price: 2490, category: 'other', nomenclatureCategory: 'Работы', linkedHardwareId: 'ec01030', image: 'https://raw.githubusercontent.com/postrigli/Montazh2/main/images_resized/rabota.png' },
+      { id: 'rec01054', name: 'Монтаж, подключение, программирование датчика влажности воздуха', price: 1490, category: 'other', nomenclatureCategory: 'Работы', linkedHardwareId: 'ec01054', image: 'https://raw.githubusercontent.com/postrigli/Montazh2/main/images_resized/rabota.png' },
+      { id: 'rec01001', name: 'Прокладка кабеля, монтаж, подключение датчика температуры', price: 2490, category: 'other', nomenclatureCategory: 'Работы', linkedHardwareId: 'ec01001', image: 'https://raw.githubusercontent.com/postrigli/Montazh2/main/images_resized/rabota.png' },
+      { id: 'rec01002', name: 'Прокладка кабеля, монтаж, подключение датчика температуры', price: 2490, category: 'other', nomenclatureCategory: 'Работы', linkedHardwareId: 'ec01002', image: 'https://raw.githubusercontent.com/postrigli/Montazh2/main/images_resized/rabota.png' },
+      { id: 'rec01003', name: 'Прокладка кабеля, монтаж, подключение датчика температуры', price: 2490, category: 'other', nomenclatureCategory: 'Работы', linkedHardwareId: 'ec01003', image: 'https://raw.githubusercontent.com/postrigli/Montazh2/main/images_resized/rabota.png' },
+      { id: 'rec01004', name: 'Прокладка кабеля, монтаж, подключение датчика температуры', price: 2490, category: 'other', nomenclatureCategory: 'Работы', linkedHardwareId: 'ec01004', image: 'https://raw.githubusercontent.com/postrigli/Montazh2/main/images_resized/rabota.png' },
+      { id: 'rec01005', name: 'Монтаж, подключение, программирование датчика температуры', price: 1490, category: 'other', nomenclatureCategory: 'Работы', linkedHardwareId: 'ec01005', image: 'https://raw.githubusercontent.com/postrigli/Montazh2/main/images_resized/rabota.png' },
+      { id: 'rec01041', name: 'Монтаж, подключение, программирование датчика температуры', price: 1490, category: 'other', nomenclatureCategory: 'Работы', linkedHardwareId: 'ec01041', image: 'https://raw.githubusercontent.com/postrigli/Montazh2/main/images_resized/rabota.png' },
+      { id: 'rec01079', name: 'Монтаж, подключение, программирование беспроводного реле', price: 1890, category: 'other', nomenclatureCategory: 'Работы', linkedHardwareId: 'ec01079', image: 'https://raw.githubusercontent.com/postrigli/Montazh2/main/images_resized/rabota.png' },
+      { id: 'rec01080', name: 'Монтаж, подключение, программирование термостата', price: 1490, category: 'other', nomenclatureCategory: 'Работы', linkedHardwareId: 'ec01080', image: 'https://raw.githubusercontent.com/postrigli/Montazh2/main/images_resized/rabota.png' },
+      { id: 'rec01064', name: 'Монтаж, подключение, программирование датчика температуры', price: 1490, category: 'other', nomenclatureCategory: 'Работы', linkedHardwareId: 'ec01064', image: 'https://raw.githubusercontent.com/postrigli/Montazh2/main/images_resized/rabota.png' },
+      { id: 'rec01096', name: 'Монтаж, подключение, программирование адаптера', price: 1190, category: 'other', nomenclatureCategory: 'Работы', linkedHardwareId: 'ec01096', image: 'https://raw.githubusercontent.com/postrigli/Montazh2/main/images_resized/rabota.png' },
+      { id: 'rec01011', name: 'Прокладка кабеля, подключение котла/насоса к системе', price: 2490, category: 'other', nomenclatureCategory: 'Работы', linkedHardwareId: 'ec01011', image: 'https://raw.githubusercontent.com/postrigli/Montazh2/main/images_resized/rabota.png' },
+      { id: 'rec01058', name: 'Прокладка кабеля, монтаж, подключение, наладка котла и адаптера', price: 2990, category: 'other', nomenclatureCategory: 'Работы', linkedHardwareId: 'ec01058', image: 'https://raw.githubusercontent.com/postrigli/Montazh2/main/images_resized/rabota.png' },
+      { id: 'rec01095', name: 'Прокладка кабеля, монтаж, подключение, наладка котла и адаптера', price: 2990, category: 'other', nomenclatureCategory: 'Работы', linkedHardwareId: 'ec01095', image: 'https://raw.githubusercontent.com/postrigli/Montazh2/main/images_resized/rabota.png' },
+      { id: 'rec01042', name: 'Прокладка кабеля, монтаж, подключение, наладка котла и адаптера', price: 2990, category: 'other', nomenclatureCategory: 'Работы', linkedHardwareId: 'ec01042', image: 'https://raw.githubusercontent.com/postrigli/Montazh2/main/images_resized/rabota.png' },
+      { id: 'rec01045', name: 'Прокладка кабеля, монтаж, подключение, наладка котла и адаптера', price: 2990, category: 'other', nomenclatureCategory: 'Работы', linkedHardwareId: 'ec01045', image: 'https://raw.githubusercontent.com/postrigli/Montazh2/main/images_resized/rabota.png' },
+      { id: 'rec01093', name: 'Прокладка кабеля, монтаж, подключение, наладка котла и адаптера', price: 2990, category: 'other', nomenclatureCategory: 'Работы', linkedHardwareId: 'ec01093', image: 'https://raw.githubusercontent.com/postrigli/Montazh2/main/images_resized/rabota.png' },
+      { id: 'rec01094', name: 'Прокладка кабеля, монтаж, подключение, наладка котла и адаптера', price: 2990, category: 'other', nomenclatureCategory: 'Работы', linkedHardwareId: 'ec01094', image: 'https://raw.githubusercontent.com/postrigli/Montazh2/main/images_resized/rabota.png' },
+      { id: 'rec01092', name: 'Прокладка кабеля, монтаж, подключение, наладка котла и адаптера', price: 2990, category: 'other', nomenclatureCategory: 'Работы', linkedHardwareId: 'ec01092', image: 'https://raw.githubusercontent.com/postrigli/Montazh2/main/images_resized/rabota.png' },
+      { id: 'rec01098', name: 'Прокладка кабеля, монтаж, подключение, наладка котла и адаптера', price: 2990, category: 'other', nomenclatureCategory: 'Работы', linkedHardwareId: 'ec01098', image: 'https://raw.githubusercontent.com/postrigli/Montazh2/main/images_resized/rabota.png' },
+      { id: 'rec01008', name: 'Прокладка кабеля, монтаж, подключение датчика утечки газа', price: 2490, category: 'other', nomenclatureCategory: 'Работы', linkedHardwareId: 'ec01008', image: 'https://raw.githubusercontent.com/postrigli/Montazh2/main/images_resized/rabota.png' },
+      { id: 'rec01009', name: 'Прокладка кабеля, монтаж, подключение привода для крана', price: 1690, category: 'other', nomenclatureCategory: 'Работы', linkedHardwareId: 'ec01009', image: 'https://raw.githubusercontent.com/postrigli/Montazh2/main/images_resized/rabota.png' },
+      { id: 'rec01022', name: 'Монтаж, подключение, программирование беспроводной розетки', price: 1490, category: 'other', nomenclatureCategory: 'Работы', linkedHardwareId: 'ec01022', image: 'https://raw.githubusercontent.com/postrigli/Montazh2/main/images_resized/rabota.png' },
+      { id: 'rec01010', name: 'Установка, прокладка кабеля, подключение манометра', price: 3990, category: 'other', nomenclatureCategory: 'Работы', linkedHardwareId: 'ec01010', image: 'https://raw.githubusercontent.com/postrigli/Montazh2/main/images_resized/rabota.png' },
+      { id: 'rPrT-100-1,6', name: 'Установка, прокладка кабеля, подключение преобразователя', price: 3990, category: 'other', nomenclatureCategory: 'Работы', linkedHardwareId: 'PRT-100-1,6', image: 'https://raw.githubusercontent.com/postrigli/Montazh2/main/images_resized/rabota.png' },
+      { id: 'r31425189', name: 'Прокладка кабеля, подключение клапана (без врезки)', price: 1490, category: 'other', nomenclatureCategory: 'Работы', linkedHardwareId: '31425189', image: 'https://raw.githubusercontent.com/postrigli/Montazh2/main/images_resized/rabota.png' },
+      { id: 'rec01013', name: 'Прокладка кабеля, монтаж, подключение датчика движения', price: 2490, category: 'other', nomenclatureCategory: 'Работы', linkedHardwareId: 'ec01013', image: 'https://raw.githubusercontent.com/postrigli/Montazh2/main/images_resized/rabota.png' },
+      { id: 'rec01012', name: 'Прокладка кабеля, монтаж, подключение датчика открытия двери', price: 2490, category: 'other', nomenclatureCategory: 'Работы', linkedHardwareId: 'ec01012', image: 'https://raw.githubusercontent.com/postrigli/Montazh2/main/images_resized/rabota.png' },
+      { id: 'rec01014', name: 'Монтаж, подключение, программирование датчика движения', price: 1490, category: 'other', nomenclatureCategory: 'Работы', linkedHardwareId: 'ec01014', image: 'https://raw.githubusercontent.com/postrigli/Montazh2/main/images_resized/rabota.png' },
+      { id: 'rec01043', name: 'Монтаж, подключение, программирование датчика открытия двери', price: 1490, category: 'other', nomenclatureCategory: 'Работы', linkedHardwareId: 'ec01043', image: 'https://raw.githubusercontent.com/postrigli/Montazh2/main/images_resized/rabota.png' },
+      { id: 'rec01016-1', name: 'Прокладка кабеля, монтаж, подключение сирены', price: 2490, category: 'other', nomenclatureCategory: 'Работы', linkedHardwareId: 'ec01016-1', image: 'https://raw.githubusercontent.com/postrigli/Montazh2/main/images_resized/rabota.png' },
+      { id: 'rec01019', name: 'Подключение, настройка брелока', price: 560, category: 'other', nomenclatureCategory: 'Работы', linkedHardwareId: 'ec01019', image: 'https://raw.githubusercontent.com/postrigli/Montazh2/main/images_resized/rabota.png' },
+      { id: 'rec01020', name: 'Прокладка кабеля, монтаж, подключение считывателя', price: 2490, category: 'other', nomenclatureCategory: 'Работы', linkedHardwareId: 'ec01020', image: 'https://raw.githubusercontent.com/postrigli/Montazh2/main/images_resized/rabota.png' },
+      { id: 'rec01068', name: 'Прокладка кабеля, монтаж, подключение датчика угарного газа (СО)', price: 1490, category: 'other', nomenclatureCategory: 'Работы', linkedHardwareId: 'ec01068', image: 'https://raw.githubusercontent.com/postrigli/Montazh2/main/images_resized/rabota.png' },
+      { id: 'rec01017', name: 'Монтаж, подключение, программирование датчика дыма', price: 1490, category: 'other', nomenclatureCategory: 'Работы', linkedHardwareId: 'ec01017', image: 'https://raw.githubusercontent.com/postrigli/Montazh2/main/images_resized/rabota.png' },
+      { id: 'rec01015', name: 'Прокладка кабеля, монтаж, подключение датчика дыма', price: 2490, category: 'other', nomenclatureCategory: 'Работы', linkedHardwareId: 'ec01015', image: 'https://raw.githubusercontent.com/postrigli/Montazh2/main/images_resized/rabota.png' },
+      { id: 'rec01007', name: 'Монтаж, подключение, программирование датчика протечки воды', price: 1490, category: 'other', nomenclatureCategory: 'Работы', linkedHardwareId: 'ec01007', image: 'https://raw.githubusercontent.com/postrigli/Montazh2/main/images_resized/rabota.png' },
+      { id: 'rec01056', name: 'Монтаж, подключение, программирование датчика протечки воды', price: 1490, category: 'other', nomenclatureCategory: 'Работы', linkedHardwareId: 'ec01056', image: 'https://raw.githubusercontent.com/postrigli/Montazh2/main/images_resized/rabota.png' },
+      { id: 'rec01006', name: 'Прокладка кабеля, монтаж, подключение датчика протечки воды', price: 2490, category: 'other', nomenclatureCategory: 'Работы', linkedHardwareId: 'ec01006', image: 'https://raw.githubusercontent.com/postrigli/Montazh2/main/images_resized/rabota.png' },
+      { id: 'r1419515-20', name: 'Прокладка кабеля, монтаж, подключение датчика протечки воды', price: 2490, category: 'other', nomenclatureCategory: 'Работы', linkedHardwareId: '1419515-20', image: 'https://raw.githubusercontent.com/postrigli/Montazh2/main/images_resized/rabota.png' },
+      { id: 'rec01111', name: 'Прокладка кабеля, подключение крана (без врезки)', price: 1490, category: 'other', nomenclatureCategory: 'Работы', linkedHardwareId: 'ec01111', image: 'https://raw.githubusercontent.com/postrigli/Montazh2/main/images_resized/rabota.png' },
+      { id: 'rec01112', name: 'Прокладка кабеля, подключение крана (без врезки)', price: 1490, category: 'other', nomenclatureCategory: 'Работы', linkedHardwareId: 'ec01112', image: 'https://raw.githubusercontent.com/postrigli/Montazh2/main/images_resized/rabota.png' },
+      { id: 'rec01113', name: 'Прокладка кабеля, подключение крана (без врезки)', price: 1490, category: 'other', nomenclatureCategory: 'Работы', linkedHardwareId: 'ec01113', image: 'https://raw.githubusercontent.com/postrigli/Montazh2/main/images_resized/rabota.png' },
+      { id: 'rec01029', name: 'Монтаж, подключение, прокладка кабеля', price: 3190, category: 'other', nomenclatureCategory: 'Работы', linkedHardwareId: 'ec01029', image: 'https://raw.githubusercontent.com/postrigli/Montazh2/main/images_resized/rabota.png' },
+      { id: 'rec01074', name: 'Прокладка кабеля, монтаж, подключение счетчика', price: 3890, category: 'other', nomenclatureCategory: 'Работы', linkedHardwareId: 'ec01074', image: 'https://raw.githubusercontent.com/postrigli/Montazh2/main/images_resized/rabota.png' },
+      { id: 'rec01075', name: 'Прокладка кабеля, монтаж, подключение счетчика', price: 5990, category: 'other', nomenclatureCategory: 'Работы', linkedHardwareId: 'ec01075', image: 'https://raw.githubusercontent.com/postrigli/Montazh2/main/images_resized/rabota.png' },
+      { id: 'rec01026', name: 'Прокладка кабеля, монтаж, подключение датчика наличия сети', price: 2190, category: 'other', nomenclatureCategory: 'Работы', linkedHardwareId: 'ec01026', image: 'https://raw.githubusercontent.com/postrigli/Montazh2/main/images_resized/rabota.png' },
+      { id: 'rec01021', name: 'Прокладка кабеля, монтаж, подключение блока управления', price: 2990, category: 'other', nomenclatureCategory: 'Работы', linkedHardwareId: 'ec01021', image: 'https://raw.githubusercontent.com/postrigli/Montazh2/main/images_resized/rabota.png' },
     ];
 
     const findProduct = (id) => PRODUCTS.find((p) => p.id === id);
@@ -588,11 +642,7 @@
         addItem('26457334', state.mixingValves);
       }
       
-      if (state.cabinetBrand === 'Plastim') {
-        addItem('9355978', state.mixingValves);
-      } else {
-        addItem('3784384', state.mixingValves);
-      }
+      // Логика переключателей для сервоприводов УДАЛЕНА отсюда и перенесена в блок выбора шкафов (пункт 4 ТЗ)
 
       addItem('ec01099', state.manifoldServos);
       usage.RELAY += state.zones;
@@ -639,11 +689,17 @@
         }
       }
 
-      if (state.heatingPumps > 0) {
+      // --- ОБНОВЛЕННАЯ УНИФИЦИРОВАННАЯ ЛОГИКА НАСОСОВ ---
+      const totalPumpSets = state.heatingPumps + (state.boilerPump ? 1 : 0) + (state.recirculationPump ? 1 : 0);
+      if (totalPumpSets > 0) {
         if (state.cabinetBrand === 'Plastim') {
-           addItem('ec01061', state.heatingPumps); addItem('8027098', state.heatingPumps); addItem('8258314', state.heatingPumps);
+           addItem('ec01061', totalPumpSets); 
+           addItem('8027098', totalPumpSets); 
+           addItem('8258314', totalPumpSets);
         } else {
-           addItem('ec01061', state.heatingPumps); addItem('TPS116', state.heatingPumps); addItem('mdla-47', state.heatingPumps);
+           addItem('ec01061', totalPumpSets); 
+           addItem('TPS116', totalPumpSets); 
+           addItem('mdla-47', totalPumpSets);
         }
       }
 
@@ -690,43 +746,49 @@
       const baseItem = cart.get('ec01v40');
       if (baseItem) baseItem.quantity = baseQty;
 
-      // --- CABINET SELECTION LOGIC (UPDATED AS PER TZ) ---
+      // --- CABINET SELECTION LOGIC ---
       const equipmentDIN = Array.from(cart.values()).reduce((sum, item) => sum + (item.dinModules ? item.dinModules * item.quantity : 0), 0);
-      
-      // Stage 1: Update overhead constants
       const overhead = state.cabinetBrand === 'Plastim' ? 16.7 : 18.9;
       let decisionDIN = equipmentDIN + overhead;
-      
       let cabQty = 1;
       let cabId = '';
       const onObj = state.installMode === 'На объекте';
 
       if (state.cabinetBrand === 'Plastim') {
-        // Handle multiple cabinets scaling
         if (decisionDIN >= 169) { cabQty = 3; decisionDIN /= 3; }
         else if (decisionDIN >= 85) { cabQty = 2; decisionDIN /= 2; }
-        
-        // Stage 2: Correct thresholds for Plastim
         if (decisionDIN < 30) cabId = '17255526';
         else if (decisionDIN < 45) cabId = '17256234';
         else if (decisionDIN < 60) cabId = '17256174';
         else cabId = '17258634';
-        
         if (cabId) {
           addItem(cabId, cabQty);
           addItem('9714494', cabQty); addItem('ec01063', cabQty); addItem('5520076', cabQty); 
           addItem('3784384', cabQty); addItem('47094328', cabQty); addItem('9345557', cabQty * 3); 
           addItem('1010012', cabQty); addItem('68108944', cabQty);
-          const workPrefix = onObj ? 'm' : 'r';
-          addItem(workPrefix + cabId, cabQty);
+          // НОВАЯ ЛОГИКА ДЛЯ СЕРВОПРИВОДОВ (Plastim): 1шт на каждый шкаф
+          if (state.mixingValves > 0) addItem('9355978', cabQty);
+          addItem((onObj ? 'm' : 'r') + cabId, cabQty);
         }
       } else {
-        // Stage 3: Tekfor scalability logic
         cabQty = Math.ceil(decisionDIN / 54);
         addItem('31982196', cabQty);
         addItem('9714494', cabQty); addItem('ec01063', cabQty * 2); addItem('5520076', cabQty);
         addItem('3784384', cabQty * 2); addItem('9345557', cabQty); addItem('1010012', cabQty); addItem('68108944', cabQty);
+        // НОВАЯ ЛОГИКА ДЛЯ СЕРВОПРИВОДОВ (Tekfor): 1шт на каждый щит
+        if (state.mixingValves > 0) addItem('3784384', cabQty);
         addItem((onObj ? 'm' : 'r') + '31982196', cabQty);
+      }
+
+      // --- АВТОМАТИЧЕСКОЕ ДОБАВЛЕНИЕ СОПУТСТВУЮЩИХ РАБОТ ---
+      if (onObj) {
+        const currentItemsInCart = Array.from(cart.values());
+        currentItemsInCart.forEach(cartItem => {
+          const relatedWork = PRODUCTS.find(p => p.linkedHardwareId === cartItem.id);
+          if (relatedWork) {
+            addItem(relatedWork.id, cartItem.quantity);
+          }
+        });
       }
 
       const finalItems = Array.from(cart.values()).map(item => {
@@ -1105,7 +1167,6 @@
         const items = calculateCart(state);
         const totalDIN = items.reduce((sum, item) => sum + (item.dinModules ? item.dinModules * item.quantity : 0), 0);
         
-        // Stage 4: Sync limits in useEffect with updated data
         const limit = state.cabinetBrand === 'Plastim' ? 255 : 165;
         
         if (totalDIN >= limit) {
